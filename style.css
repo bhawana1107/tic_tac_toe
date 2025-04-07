@@ -1,1 +1,23 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.col {
+    height: 105px;
+    width: 105px;
+    border: 2px solid #06068b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    cursor: pointer;
+}
