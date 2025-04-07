@@ -1,5 +1,6 @@
 let currentPlayer = "X" ;
 let arr = Array(9).fill(null);
+let gameOver = false;
 
 function showMessage(message, color) {
     const msgBox = document.createElement("div");
@@ -25,6 +26,7 @@ function checkWinner() {
         (arr[2] !== null && arr[2] == arr[4] && arr[4] == arr[6]) 
     ){
         showMessage(`Winner is ${currentPlayer}`, "red");
+        gameOver = true;
         return;
     }
 
