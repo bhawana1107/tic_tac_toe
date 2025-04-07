@@ -10,6 +10,13 @@ body {
     background: linear-gradient(to bottom right, #ebdde7, #e0e5ed);
 }
 
+.heading{
+    font-size: 42px;
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(23, 3, 141);
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -47,6 +54,20 @@ body {
     border-bottom: none;
 }
 
+.message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    /* margin-top: 30px; */
+}
+
+#message {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
 #restart {
     border: 2px solid #fff;
     font-size: 20px;
@@ -54,7 +75,11 @@ body {
     color: #fff;
     padding: 12px 20px;
     border-radius: 5px;
-   /* margin: auto; */
     width: 100px;
     display: none;
+    cursor: pointer;
+}
+
+#restart:hover {
+    background-color: #050546;
 }

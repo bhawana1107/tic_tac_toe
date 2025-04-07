@@ -3,15 +3,14 @@ let arr = Array(9).fill(null);
 let gameOver = false;
 
 function showMessage(message, color) {
-    const msgBox = document.createElement("div");
-    msgBox.innerText = message;
-    msgBox.style.color = color;
-    msgBox.style.fontSize = "44px";
-    msgBox.style.fontWeight = "bold";
-    msgBox.style.textAlign = "center";
-    msgBox.style.marginTop = "20px";
+    const msg = document.getElementById("message");
+    msg.innerText = message;
+    msg.style.color = color;
 
-    document.body.appendChild(msgBox);
+    const container = document.getElementById("message-box");
+    container.style.display = "flex";
+
+    document.getElementById("restart").style.display = "block";
 }
 
 function checkWinner() {
@@ -25,14 +24,14 @@ function checkWinner() {
         (arr[0] !== null && arr[0] == arr[4] && arr[4] == arr[8]) ||
         (arr[2] !== null && arr[2] == arr[4] && arr[4] == arr[6]) 
     ){
-        showMessage(`Winner is ${currentPlayer}`, "red" , `rest`);
+        showMessage(`Winner is ${currentPlayer}`, "red");
         gameOver = true;
-        document.getElementById("restart").style.display = "block";
         return;
     }
 
     if (!arr.some (e => e === null)){
-        document.write(`Draw !!`);
+        showMessage(`Match Draw !!`, "orange");
+        gameOver = true;
         return;
     }
 }
