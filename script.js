@@ -6,7 +6,7 @@ function showMessage(message, color) {
     const msgBox = document.createElement("div");
     msgBox.innerText = message;
     msgBox.style.color = color;
-    msgBox.style.fontSize = "24px";
+    msgBox.style.fontSize = "44px";
     msgBox.style.fontWeight = "bold";
     msgBox.style.textAlign = "center";
     msgBox.style.marginTop = "20px";
@@ -25,8 +25,9 @@ function checkWinner() {
         (arr[0] !== null && arr[0] == arr[4] && arr[4] == arr[8]) ||
         (arr[2] !== null && arr[2] == arr[4] && arr[4] == arr[6]) 
     ){
-        showMessage(`Winner is ${currentPlayer}`, "red");
+        showMessage(`Winner is ${currentPlayer}`, "red" , `rest`);
         gameOver = true;
+        document.getElementById("restart").style.display = "block";
         return;
     }
 
