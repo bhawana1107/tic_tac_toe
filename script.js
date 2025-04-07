@@ -37,6 +37,7 @@ function checkWinner() {
 }
 
 function handleClick(el) {
+    if (gameOver) return;
    const id = Number(el.id);
    if (arr[id] !== null) return ;
    arr[id] = currentPlayer ;
